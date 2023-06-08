@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <style>
+      * {
+        outline: 0px solid transparent;
+        -webkit-tap-highlight-color: #000000;
+        -webkit-touch-callout: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      html,
+      body {
+        flex: 1;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        font-family: "-apple-system", "HelveticaNeue", Helvetica, Roboto, Arial,
+          sans-serif;
+        font-size: 1em;
+        color: #000000;
+
+        height: 100%;
+        min-height: 100%;
+
+        overflow: hidden;
+      }
+      p {
+        margin: 0;
+      }
+
+      *:focus {
+        outline: none;
+      }
+      .ProseMirror p.is-editor-empty:first-child::before {
+        color: #adb5bd;
+        content: attr(data-placeholder);
+        float: left;
+        height: 0;
+        pointer-events: none;
+      }
+
+      .ProseMirror ul {
+        list-style: disc;
+        margin-left: 20px;
+      }
+
+      .ProseMirror ol {
+        list-style: decimal;
+        margin-left: 20px;
+      }
+
+      .ProseMirror a {
+        color: blue;
+        text-decoration: underline;
+      }
+
+      .ProseMirror ul > li > ul {
+        list-style: circle;
+      }
+
+      .ProseMirror ul > li > ul > li > ul {
+        list-style: square;
+      }
+
+      .ProseMirror ul > li > ul > li > ul > li > ul {
+        list-style: disc;
+      }
+
+      .ProseMirror ul > li > ul > li > ul > li > ul > li > ul {
+        list-style: circle;
+      }
+
+      .ProseMirror ul > li > ul > li > ul > li > ul > li > ul > li > ul {
+        list-style: square;
+      }
+
+      .ProseMirror .mention {
+        background-color: yellow;
+        color: white;
+        padding: 0 3px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>hello world</div>
+    <div style="height: 200px; max-height: 200px">
+      <div
+        id="editor"
+        style="
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          background: #ededed;
+          overflow-y: scroll;
+        "
+      ></div>
+    </div>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
