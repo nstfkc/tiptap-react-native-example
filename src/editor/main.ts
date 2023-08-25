@@ -82,7 +82,8 @@ export type NativeMessage =
   | { kind: "editor"; payload: "focus" | "blur" }
   | { kind: "initialContent"; payload: string };
 
-window.addEventListener("message", (message: { data: string }) => {
+function handleMessageEvent(event: MessageEvent | Event) {
+  const message: { data: string } = event as { data: string };
   const nativeMessage: NativeMessage = JSON.parse(message.data);
   if (nativeMessage.kind === "action") {
     const fn = editorActions[nativeMessage.payload];
@@ -99,4 +100,8 @@ window.addEventListener("message", (message: { data: string }) => {
       editor.commands.blur();
     }
   }
-});
+}
+
+window.addEventListener("message", handleMessageEvent);
+
+document.addEventListener("message", handleMessageEvent);
