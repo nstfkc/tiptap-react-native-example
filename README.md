@@ -3,7 +3,7 @@
 This repository is created to showcase an example implementation of a rich text editor with tiptap.dev on react native.
 
 For more details check out this blog post.
-https://nstfkc.com/blog/how-to-implement-rich-text-editor-with-tiptap-on-react-native
+[https://nstfkc.com/blog/how-to-implement-rich-text-editor-with-tiptap-on-react-native](https://nstfkc-com.vercel.app/blog/how-to-implement-rich-text-editor-with-tiptap-on-react-native)
 
 
 ## Local environment
